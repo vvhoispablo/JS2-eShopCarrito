@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+</head>
+
+<body>
+    <div id="elements"></div> 
+</body>
+
+    <script>
+        /*lst = [ {
+            nombre: "Pablo",
+            apellido: "Tanno",
+            edad: "30",
+            preferidos: ["California Roll", "Passion Roll", "Gyozas", "Poke Salmón Teriyaki" ]
+        }, {
+            nombre: "Nicolás",
+            apellido: "Tanno",
+            edad: "24",
+            preferidos: ["Feel Roll", "Ebi Nigiri", "Yakisoba" ]
+        }];
+
+    localStorage.setItem("list",JSON.stringify(lst));*/
+
+    lst =JSON.parse(localStorage.getItem("list"));
+
+    lst.forEach(element => { 
+        let elements = document.getElementById("elements");
+        let div = document.createElement("div");
+        div.innerHTML = element.nombre + " " + element.apellido + " " + element.edad + "" + element.preferidos;
+        element.appendChild(div);
+    });
+
+</html>

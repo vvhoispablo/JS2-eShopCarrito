@@ -1,0 +1,14 @@
+[ 
+    {
+        "nombre":"Pablo",
+        "apellido":"Tanno",
+        "edad":30,
+        "preferidos": ["California Roll", "Passion Roll", "Gyozas", "Poke Salmón Teriyaki" ]
+    },
+    {
+        "nombre":"Nicolás",
+        "apellido":"Tanno",
+        "edad":24,
+        "preferidos": ["Feel Roll", "Ebi Nigiri", "Yakisoba" ]
+    }
+]
