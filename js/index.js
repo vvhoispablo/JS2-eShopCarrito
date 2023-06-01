@@ -42,17 +42,17 @@ window.addEventListener('load', function() {
         {nombre: 'Yakimeshi de Cerdo y Vegetales', imagen: './assets/img/yakimeshiwok.png', precio: 620, cantidad: 1, id: 'wok-menu'},
         {nombre: 'Yakisoba de Pollo', imagen: './assets/img/yakisobawok.png', precio: 780, cantidad: 1, id: 'wok-menu'},    
     ];
-    let beberageList = [
-        {nombre: 'Lata de Sprite', imagen: './assets/img/sprite.png', precio: 200, cantidad: 1, id: 'beberage-menu'},
-        {nombre: 'Lata de Mirinda', imagen: './assets/img/mirinda.png', precio: 200, cantidad: 1, id: 'beberage-menu'},
-        {nombre: 'Lata de Coca Cola Zero', imagen: './assets/img/cocacolazero.png', precio: 200, cantidad: 1, id: 'beberage-menu'},
-        {nombre: 'Lata de Coca Cola', imagen: './assets/img/cocacola.png', precio: 220, cantidad: 1, id: 'beberage-menu'},
-        {nombre: 'Agua sin gas Evian de 1L', imagen: './assets/img/evian.png', precio: 150, cantidad: 1, id: 'beberage-menu'}
+    let beverageList = [
+        {nombre: 'Lata de Sprite', imagen: './assets/img/sprite.png', precio: 200, cantidad: 1, id: 'beverage-menu'},
+        {nombre: 'Lata de Mirinda', imagen: './assets/img/mirinda.png', precio: 200, cantidad: 1, id: 'beverage-menu'},
+        {nombre: 'Lata de Coca Cola Zero', imagen: './assets/img/cocacolazero.png', precio: 200, cantidad: 1, id: 'beverage-menu'},
+        {nombre: 'Lata de Coca Cola', imagen: './assets/img/cocacola.png', precio: 220, cantidad: 1, id: 'beverage-menu'},
+        {nombre: 'Agua sin gas Evian de 1L', imagen: './assets/img/evian.png', precio: 150, cantidad: 1, id: 'beverage-menu'}
     ];
 
     let emptyList = [];
 
-    let allProducts = sushirollList.concat(pokebowlList).concat(wokList).concat(beberageList);
+    let allProducts = sushirollList.concat(pokebowlList).concat(wokList).concat(beverageList);
 
     const greeting = () => {
         this.document.getElementById('greeting').innerHTML =
@@ -67,13 +67,13 @@ window.addEventListener('load', function() {
     let btnSushiRoll = document.getElementById("sushiroll-btn");
     let btnPokeBowl = document.getElementById("pokebowl-btn");
     let btnWok = document.getElementById("wok-btn");
-    let btnBeberage = document.getElementById("beberage-btn");
+    let btnBeverage = document.getElementById("beverage-btn");
 
     const removeButtonStyle = () => {
         btnSushiRoll.classList.remove("btn-sushiroll-active");
         btnPokeBowl.classList.remove("btn-pokebowl-active");
         btnWok.classList.remove("btn-wok-active");
-        btnBeberage.classList.remove("btn-beberage-active");
+        btnBeverage.classList.remove("btn-beverage-active");
     };
 
     let notificationText = document.getElementById("notification");
@@ -200,7 +200,7 @@ window.addEventListener('load', function() {
                     notification(notificationTextWarningAdd);
                     
                 }else{
-                    swal("Ouch!...", "No se puede agregar más, hay escacez de stock", "warning");
+                    swal("Ouch!...", "No se puede agregar más, hay escasez de stock", "warning");
                 };
                 
             });
@@ -341,8 +341,8 @@ window.addEventListener('load', function() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     });
-    btnBeberage.addEventListener('click', () =>{
-        showLists(beberageList, "menu");
+    btnBeverage.addEventListener('click', () =>{
+        showLists(beverageList, "menu");
         removeInputAnimation();
         document.getElementById("order-sent").classList.remove("show");
         document.getElementById("header").style.display = "grid";
@@ -354,9 +354,9 @@ window.addEventListener('load', function() {
         document.getElementById("menu").classList.add("show");
         document.getElementById("header-text").style.color = "rgb(193, 223, 192)";
         removeButtonStyle();
-        btnBeberage.classList.add("btn-beberage-active");
-        document.getElementById("icon-header").innerHTML = `<i class="<i class="fas fa-glass-citrus" style="color: #000000 header-icon" id="beberage-icon"></i>`;
-        document.getElementById("beberage-icon").style.backgroundImage = "url('../assets/img/bg-beberage.png')";
+        btnBeverage.classList.add("btn-beverage-active");
+        document.getElementById("icon-header").innerHTML = `<i class="<i class="fas fa-glass-citrus" style="color: #000000 header-icon" id="beverage-icon"></i>`;
+        document.getElementById("beverage-icon").style.backgroundImage = "url('../assets/img/bg-beverage.png')";
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     });
@@ -479,7 +479,7 @@ window.addEventListener('load', function() {
 
                     createOrder();
                 }else{
-                    swal("Ouch!...", "No se puede agregar más, hay escacez de stock", "warning");
+                    swal("Ouch!...", "No se puede agregar más, hay escasez de stock", "warning");
                 };
                 
             });
@@ -625,6 +625,4 @@ window.addEventListener('load', function() {
             createOrder();
         };
     });
-    
-
 });
