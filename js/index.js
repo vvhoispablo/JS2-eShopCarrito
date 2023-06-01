@@ -538,7 +538,7 @@ window.addEventListener('load', function() {
         document.getElementById("order-list").innerHTML = orderList;
         document.getElementById("order-total").innerHTML = 
         `
-            <p class="order-total">Total: $ ${total+80}</p>
+            <p class="order-total">Total: $ ${total+190}</p>
         `;
 
         removeItems();
@@ -553,7 +553,7 @@ window.addEventListener('load', function() {
         }
         
         document.getElementById("order-whatsapp").innerHTML = `
-        <a class="order-btn wapp" id="wapp-order" href="https://api.whatsapp.com/send?phone=542215692366&text=*Hola Oishi! Sushi* Me gustaría pedir: ${orderWhatsapp} Total: $ ${total+80}. Gracias" target="_blank"><i class="fab fa-whatsapp"></i> Enviar por Whatsapp</a>
+        <a class="order-btn wapp" id="wapp-order" href="https://api.whatsapp.com/send?phone=542215692366&text=*Hola Oishi! Sushi* Me gustaría pedir: ${orderWhatsapp} Total: $ ${total+190}. Gracias" target="_blank"><i class="fab fa-whatsapp"></i> Enviar por Whatsapp</a>
         `;
 
         deleteOrder();
