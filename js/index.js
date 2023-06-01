@@ -181,7 +181,7 @@ window.addEventListener('load', function() {
         for (let i = 0; i < list.length; i++){
 
             document.getElementById(`plus-list${i}`).addEventListener('click', ()=>{
-                if (list[i].cantidad < 500){
+                if (list[i].cantidad < 50){
                     list[i].cantidad += 1;
                     
                     this.document.getElementById(`quantity-list${i}`).innerHTML = `${list[i].cantidad}`;
