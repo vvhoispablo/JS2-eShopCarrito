@@ -510,7 +510,7 @@ window.addEventListener('load', function() {
             <h4>Tu Carrito:</h4>
             <div class="order-text" id="order-text">
                 <p class="order-text-cantidad"></p>
-                <p class="order-text-price">$ 80</p>
+                <p class="order-text-price">$190 el envío</p>
                 <p class="order-text-cancel"></p>
             </div>
         `;
