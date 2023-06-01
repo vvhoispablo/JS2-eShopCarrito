@@ -181,7 +181,7 @@ window.addEventListener('load', function() {
         for (let i = 0; i < list.length; i++){
 
             document.getElementById(`plus-list${i}`).addEventListener('click', ()=>{
-                if (list[i].cantidad < 10){
+                if (list[i].cantidad < 500){
                     list[i].cantidad += 1;
                     
                     this.document.getElementById(`quantity-list${i}`).innerHTML = `${list[i].cantidad}`;
@@ -471,7 +471,7 @@ window.addEventListener('load', function() {
     const add = () => {
         for (let i = 0; i < order.length; i++){
             document.getElementById(`plus${i}`).addEventListener('click', ()=>{
-                if (order[i].cantidad < 10){
+                if (order[i].cantidad < 50){
                     order[i].cantidad += 1;
                     notificationTextWarningAdd.innerHTML = `
                     <p><i class="fas fa-exclamation"></i> Se agrego 1 unidad más de ${order[i].nombre}</p>`;
