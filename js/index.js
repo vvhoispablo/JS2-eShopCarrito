@@ -374,7 +374,7 @@ window.addEventListener('load', function() {
         document.getElementById("no-search-result").classList.add("show");
         document.getElementById("header").style.display = "none";
         document.getElementById("no-search-result").innerHTML = `
-            <p class="search-result box-notification">Busca algo que podría estar nuestra carta </p>`;
+            <p class="search-result box-notification">busca algo que podría haber en nuestra carta</p>`;
         document.getElementById("no-order").classList.remove("show");
         document.getElementById("order-sent").classList.remove("show");
         if (searchInput.style.display === "none") {
